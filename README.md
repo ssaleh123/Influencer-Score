@@ -28,17 +28,7 @@ Installation
 
 Clone the repository:
 
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-
-Set up environment variables for API keys and Supabase credentials in a .env file.
-
-Usage
+git clone https://github.com/ssaleh123/Influencer-Score.git
 
 Run the main execution script to fetch data and calculate scores:
 
