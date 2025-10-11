@@ -1,0 +1,135 @@
+Post and User Data
+Instagram2v7.py 
+Facebook5v13.py, facebookreelsv2.py 
+Tiktokscraperv21.py
+Youtubev4.py 
+Twitterv10.py
+	
+Engagement Scores
+Engagement_Score_Tiktokv5.py
+Engagement_Score_Instagramv3.py
+Engagement_Score_Youtubev3.py
+Engagement_Score_Facebookv3.py
+Engagement_Score_Twitterv2.py
+
+Follower Scores
+FollowerScoreTiktok.py
+FollowerScoreFacebook.py
+FollowerScoreYoutube.py
+FollowerScoreTwitter.py
+FollowerScoreInstagram.py
+
+Google Search Scores
+googlev6.py inserts article info
+googlev7.py inserts volume, trend and knowledge panel info
+googlealgorithm.py inserts google search score 
+
+Influencer Score Algorithm
+ScoreTotalv6.py
+
+Niche_Score → Niche_Score.py
+Every Influencer has a niche
+Niche score is their score normalized against everyone in that niche
+
+Execution Script
+script_execution.py
+
+Engagement_Score_Facebookv2.py
+Like count *.4
+Comment Count *.6
+Play count *.2
+Reshare count *1
+
+Separating posts into video (has play_count) and picture (no play_count).
+score=(total engagements) ÷ (followers×posts)×100
+Weighting final score by post type ratio.
+Normalizing to 100 based on the highest score.
+
+Engagement_Score_Tiktokv4.py
+Like count *.4
+Comment Count *.6
+Play count *.2
+Share count * 1
+Collect count *.8
+
+Separating posts into video (has play_count) and picture (no play_count).
+score=(totalengagements)÷(followers×posts)×100
+Weighting final score by post type ratio.
+Normalizing to 100 based on the highest score.
+
+
+Engagement_Score_Instagramv2.py
+Like count *.4
+Comment Count *.6
+Play count *.2
+Share count * 1
+
+Separating posts into video (has play_count) and picture (no play_count).
+score=(totalengagements)÷(followers×posts)×100
+Weighting final score by post type ratio.
+Normalizing to 100 based on the highest score.
+
+Engagement_Score_Youtubev3.py
+Like count *.4
+Comment Count *.6
+Play count *.2
+
+Normalizing to 100 based on the highest score.
+
+Engagement_Score_Twitter.py
+Like count *.4
+Comment Count *.6
+Play count *.2
+Reshare count *1
+
+Normalizing to 100 based on the highest score.
+
+googlealgorithm.py
+Domain Authority Average: *10
+Average Date Score: 100 - (days since article ÷ 365 × 100): *10
+Traffic per Volume: (URL_Monthly_Visits ÷ Volume) per article, averaged: *10
+Semantic Score Average: *30
+Trend: *20
+Knowledge Panel: Yes → 100, No → 0: *20
+Final score = sum of all these weighted components
+Normalized each score to a 100 scale based on the highest score
+
+FollowerScores
+follower_score=(follower_count/max_followers) × 100
+
+ScoreTotalv6.py
+Get all follower and engagement scores from INFLUENCER_SCORE.
+Youtube *2
+Instagram *1.5
+Tiktok *2.5
+Facebook *1
+Twitter *1
+
+Average the weighted follower and engagement scores.
+Normalize each score to a 100 scale based on the highest score
+
+weighted_follower_score= (5.26×1.5)+(0.74×2.5)+(8.43×2.5)+(29.49×1.0)+(1.07×2.5) / 1.5+2.5+1.0+2.5+2.5
+weighted_engagement_score= (100×2.5)+(1.53×1.0)+(0*2.5 twitter) +(24.49×2.5)+(26.98×1.5) / 1.5+2.5+1.0+2.5
+total_score= (weighted_follower_score+weighted_engagement_score) / 2
+normalized_score= (total_score / max_score) × 100
+
+The platform scores (youtube_score, instagram_score, etc) is the follower and engagement score averaged then normalized.
+Social score is the platform scores with their weights then normalized.
+Social score is worth 60 percent and normalized search score (googlealgorithm score) is worth 40 percent.
+Normalizes the final score.
+
+APIs
+Instagram: https://rapidapi.com/SocialScrapper/api/instagram-scrapper-posts-reels-stories-downloader
+Twitter: https://rapidapi.com/datahungrybeast/api/twitter154 
+Facebook: https://rapidapi.com/krasnoludkolo/api/facebook-scraper3 and https://rapidapi.com/oussemaf/api/facebook-scraper-api4 ← NOT USING
+Tiktok: https://rapidapi.com/littlesun123/api/tiktok-api15
+Youtube: https://rapidapi.com/nguyenthuan281294/api/youtube-real-time-api follower count
+
+Google: https://rapidapi.com/bfd-id/api/google-news13 recent news articles https://rapidapi.com/jobykjoseph10/api/ahrefs2 domain rating and monthly traffic https://rapidapi.com/pwshub-pwshub-default/api/article-extractor2 article publish date https://rapidapi.com/rhmueed/api/google-keyword-insight1 search volume and trend data https://rapidapi.com/herosAPI/api/google-search74 knowledge panel
+
+
+
+
+
+
+
